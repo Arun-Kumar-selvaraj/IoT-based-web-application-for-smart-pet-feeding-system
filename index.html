@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+      
+    <title>Smart Pet Feeding System</title>
+</head>
+<style>
+h1 {
+  text-align: center;
+}
+.firebase_display_text{
+        border-radius: 8px;
+        width: auto;
+        height: auto;
+        margin: 0;
+        position: absolute;
+        top: 78%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    #toggle-button {
+          display: none;
+        }
+        #toggle-button + label {
+          display: inline-block;
+          padding: 0.5em 1em;
+          background-color: #ccc;
+          border-radius: 0.5em;
+          cursor: pointer;
+        }
+        #toggle-button:checked + label {
+          background-color: #66c2a5;
+          color: #fff;
+        }
+</style>
+<body>
+    <h1>Provender feeder</h1>
+    <div class="esp32_web_server_login_page_top">
+        <input type="text" placeholder="user name" id="user_name" value="1"> //input for feed option
+        <input type="text" placeholder="user name" id="water" value="1"> //input for water option 
+        <div>
+              <button id="write_data_to_firebase">feed</button>
+        </div>
+        <div>
+              <button id="read_data_from_firebase">Read Data from Firebase</button>
+                            
+        </div>
+    </div>
+    <div class="firebase_display_text">
+        <h2><<<----- Display read data ----->>></h2>
+        <p id="display_read_data">Before: <'empty'></p>
+    </div>
+<script src="datalink.js" type="module"></script>
+</body>
+</html>
